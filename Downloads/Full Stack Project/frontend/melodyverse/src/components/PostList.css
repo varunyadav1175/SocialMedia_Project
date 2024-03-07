@@ -1,0 +1,75 @@
+.post-list-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('https://source.unsplash.com/a-plane-flying-in-the-sky-at-sunset-TIvFLeqZ4ec');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    }
+
+  .logout-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Adjust the radius for rounded corners */
+    cursor: pointer;
+  }
+  
+  .logout-button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+  }
+
+  .post-list-heading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .post-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .post-box {
+    background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: all 0.3s ease;
+  }
+  
+  .post-box:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Darker shadow */
+    background-color: #f9f9f9; /* Darker background color */
+  }
+  
+  .post-title {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #222;
+  }
+  
+  .post-content {
+    text-align: justify;
+    color: #444;
+  }
+  
+  .post-info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  

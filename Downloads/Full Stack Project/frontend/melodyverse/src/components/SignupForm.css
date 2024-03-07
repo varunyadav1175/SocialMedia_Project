@@ -1,7 +1,7 @@
 /* SignupForm.css */
 
 .signup-form-container {
-    background-image: url('https://source.unsplash.com/random');
+    background-image: url('https://source.unsplash.com/a-plane-flying-in-the-sky-at-sunset-TIvFLeqZ4ec');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -11,9 +11,9 @@
   }
   
   .signup-form-content {
-    max-width: 400px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    padding: 30px;
+    background-color: rgba(255, 253, 253, 0.199);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
@@ -35,7 +35,7 @@
   }
   
   .input-field {
-    width: 100%;
+    width: 150%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -47,7 +47,7 @@
   }
   
   .terms-label {
-    font-size: 14px;
+    font-size: 12px;
   }
   
   .submit-button {

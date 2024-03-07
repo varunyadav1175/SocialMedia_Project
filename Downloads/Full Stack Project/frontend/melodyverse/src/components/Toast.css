@@ -1,0 +1,30 @@
+/* Toast.css */
+
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50; /* Green background color */
+    color: white;
+    padding: 16px;
+    border-radius: 5px;
+    z-index: 999; /* Ensure the toast is on top of other content */
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+  }
+  
+  .close-button:hover {
+    color: #fff; /* Change color on hover */
+  }
+  

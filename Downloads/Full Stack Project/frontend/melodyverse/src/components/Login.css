@@ -1,0 +1,99 @@
+/* Login.css */
+
+.login-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://source.unsplash.com/a-plane-flying-in-the-sky-at-sunset-TIvFLeqZ4ec');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .password-toggle-button {
+    color: #444444;
+  }
+
+  .login-form-content {
+    background-color: rgba(255, 255, 255, 0.226);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+  }
+  
+  .form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 24px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input-field:focus {
+    border-color: #007bff;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 5px;
+  }
+  
+  .submit-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .signup-button {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-button:hover {
+    background-color: #218838;
+  }
+  
+  .additional-options {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .signup-link,
+  .forgot-password {
+    color: #383737;
+    text-decoration: none;
+  }
+  
+  .signup-link:hover,
+  .forgot-password:hover {
+    text-decoration: underline;
+  }

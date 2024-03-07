@@ -6,10 +6,12 @@ import * as Yup from 'yup';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './SignupForm.css'; // Import CSS file
+import Toast from './toast'
 
 const SignupForm = () => {
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [showSignupToast, setShowSignupToast] = useState(false);
   const navigate = useNavigate();
 
   const initialValues = {
@@ -35,23 +37,24 @@ const SignupForm = () => {
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
       const response = await axios.post('http://localhost:3000/api/auth/signup', values);
-      setSuccessMessage(response.data.message);
-      setErrorMessage('');
       const token = response.data.token;
       localStorage.setItem('token', token);
-  
-      // Include token in headers for the GET request
-      const config = {
-        headers: { Authorization: `Bearer ${token}` }
-      };
-      await axios.get('http://localhost:3000/api/auth/posts', config);
-
+      setSuccessMessage(response.data.message);
+      setErrorMessage('');
+      setShowSignupToast(true); // Show the signup toast
+      setTimeout(() => {
+        navigate('/posts'); // Redirect to posts page after a delay
+      }, 2000); // Adjust the delay as needed
     } catch (error) {
       setSuccessMessage('');
       setErrorMessage('An error occurred while signing up');
     }
     setSubmitting(false);
   };
+  
+  
+  
+  
 
   return (
     <div className="signup-form-container">
@@ -111,6 +114,7 @@ const SignupForm = () => {
         {/* Success and error messages */}
         {successMessage && <div className="success-message">{successMessage}</div>}
         {errorMessage && <div className="error-message">{errorMessage}</div>}
+        {showSignupToast && <Toast message="Signup successful!" />}
       </div>
     </div>
   );
