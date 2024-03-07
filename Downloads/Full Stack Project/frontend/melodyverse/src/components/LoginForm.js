@@ -53,12 +53,14 @@ const LoginForm = () => {
                 <ErrorMessage name="username" component="div" className="error-message" />
               </div>
               <div className="form-group password-group">
+                
                 <Field type={showPassword ? 'text' : 'password'} name="password" placeholder="Password" className="input-field" />
+                <ErrorMessage name="password" component="div" className="error-message" />
                 <button type="button" onClick={() => setShowPassword(!showPassword)} className="password-toggle-button">
                   {showPassword ? 'Hide Password 🔒' : 'Show Password 👁️'}
                 </button>
+                <a href="/forgotpassword" className="forgot-password-text">Forgot Password</a>
               </div>
-                <ErrorMessage name="password" component="div" className="error-message" />
               <button type="submit" disabled={isSubmitting} className="submit-button">
                 {isSubmitting ? 'Logging in...' : 'Login'}
               </button>
@@ -67,8 +69,7 @@ const LoginForm = () => {
         </Formik>
         {errorMessage && <div className="error-message">{errorMessage}</div>}
         <div className="additional-options">
-          <a href="/signup" className="signup-link">Signup</a>
-          <a href="/forgotpassword" className="forgot-password">Forgot Password</a>
+          <p class="notmember">Not a member Yet?</p><a href="/signup" className="signup-link">Signup</a>
         </div>
         {/* Show the toast message if login is successful */}
         {showToast && <Toast message="Login successful!" onClose={() => setShowToast(false)} />}

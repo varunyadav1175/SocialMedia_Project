@@ -1,5 +1,13 @@
 /* Login.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Update the font-family property for the relevant elements to use Poppins */
+body {
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  background-color: #f7f7f7;
+}
+
 .login-form-container {
     display: flex;
     justify-content: center;
@@ -12,6 +20,7 @@
   
   .password-toggle-button {
     color: #444444;
+    font-size: 12px;
   }
 
   .login-form-content {
@@ -86,14 +95,25 @@
     display: flex;
     justify-content: space-between;
   }
-  
-  .signup-link,
-  .forgot-password {
+
+  .forgot-password-text{
+    font-size: 10px;
+    align-self: right;
+    padding-left: 40px;
+  }
+
+  .signup-link{
     color: #383737;
+    font-size: 12px;
     text-decoration: none;
   }
   
   .signup-link:hover,
-  .forgot-password:hover {
+  .forgot-password-text:hover {
     text-decoration: underline;
+  }
+
+  .notmember{
+    font-size: 12px;
+    color:rgba(56, 56, 56, 0.897)
   }
